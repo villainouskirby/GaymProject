@@ -48,6 +48,7 @@ public class MsgPanel : MonoBehaviour
     /// <param name="msgTime">Time</param>
     public void InitMsgPanel(string faction, string name, string[] msg)
     {
+        nextMsgIcon.SetActive(false);
         gameObject.SetActive(true);
         str_Msg = msg;
         this.faction.text = faction;
@@ -60,7 +61,7 @@ public class MsgPanel : MonoBehaviour
         this.msg.DOText(msg[msgIndex], msgTime).OnComplete(() =>
         {
             msgIndex++;
-            Invoke(nameof(currentMsgFin), 1f);
+            Invoke(nameof(currentMsgFin), 0.5f);
         });
     }
 
@@ -72,18 +73,20 @@ public class MsgPanel : MonoBehaviour
             return;
         }
 
+        nextMsgIcon.SetActive(false);
         isCurrentMsgFinish = false;
         msg.text = "";
         this.msg.DOText(str_Msg[msgIndex], msgTime).OnComplete(() =>
         {
             msgIndex++;
-            Invoke(nameof(currentMsgFin), 1f);
+            Invoke(nameof(currentMsgFin), 0.5f);
         });
     }
 
     void currentMsgFin()
     {
         isCurrentMsgFinish = true;
+        nextMsgIcon.SetActive(true);
     }
 
 }
