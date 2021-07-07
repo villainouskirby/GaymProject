@@ -17,8 +17,14 @@ public class GemCase : MonoBehaviour
     {
         for (int i = 0; i < GameManager.Instance.GemDatas.dataArray.Length; i++)
         {
-            GameObject temp = Instantiate(gemIconPrefab, this.gameObject.transform);
-            temp.GetComponent<Gem>().InitData(GameManager.Instance.GemDatas.dataArray[i], sprites[i], gemInfoPanel);
+            for (int j = 0; j < GameManager.Instance.PlayerData.unlockGemIndex.Count; j++)
+            {
+                if (i == GameManager.Instance.PlayerData.unlockGemIndex[j])
+                {
+                    GameObject temp = Instantiate(gemIconPrefab, this.gameObject.transform);
+                    temp.GetComponent<Gem>().InitData(GameManager.Instance.GemDatas.dataArray[i], sprites[i], gemInfoPanel);
+                }
+            }
         }
     }
 

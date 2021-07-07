@@ -12,17 +12,32 @@ public class GemInfo : MonoBehaviour
     [SerializeField] Text gemInfo;
     [SerializeField] Text gemCost;
 
-    public void InitGemInfoPanel(Sprite sprite, string gemName, string gemInfo, short gemCost)
+    public void InitGemInfoPanel(Sprite sprite, GemsData data, Gem gem)
     {
         gameObject.SetActive(true);
 
         gemImage.sprite = sprite;
-        this.gemInfo.text = gemInfo;
-        this.gemName.text = gemName;
-        this.gemCost.text = $"코스트 : {gemCost}";
+        this.gemInfo.text = data.Info;
+        this.gemName.text = data.Name;
+        this.gemCost.text = $"코스트 : {data.Cost}";
 
         btnCancel.onClick.AddListener(() => gameObject.SetActive(false));
-        // btnOK.onClick.AddListener() TODO : 장착하는 함수 만들기.
+        btnOK.onClick.AddListener(() => 
+        {
+            FindObjectOfType<GemUI>().SetGem(data.Index);
+
+            Gem[] temp =  FindObjectsOfType<Gem>();
+            for (int i = 0; i < temp.Length; i++)
+            {
+                if(temp[i].Data.Index == data.Index)
+                {
+                    temp[i].GetComponent<Button>().interactable = false;
+                }
+            }
+
+            gameObject.SetActive(false);
+
+        });
     }
 
 }

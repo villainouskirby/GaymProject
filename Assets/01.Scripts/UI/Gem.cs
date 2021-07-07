@@ -7,20 +7,15 @@ public class Gem : MonoBehaviour
 {
     [SerializeField] Image image;
     GemsData data = new GemsData();
+    public GemsData Data { get { return data; } }
     GemInfo infoPanel;
-
-    bool isSelected = false;
 
     public void InitData(GemsData data, Sprite sprite, GemInfo infoPanel)
     {
         this.infoPanel = infoPanel;
         image.sprite = sprite;
         this.data = data;
-    }
-
-    public void OnClick()
-    {
-        infoPanel.InitGemInfoPanel(image.sprite, data.Name, data.Info, data.Cost);
+        this.GetComponent<Button>().onClick.AddListener(() => infoPanel.InitGemInfoPanel(image.sprite, data, this));
     }
 
 }
