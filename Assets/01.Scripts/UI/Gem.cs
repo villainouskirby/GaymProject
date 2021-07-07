@@ -10,12 +10,18 @@ public class Gem : MonoBehaviour
     public GemsData Data { get { return data; } }
     GemInfo infoPanel = null;
 
-    public void InitData(GemsData data, Sprite sprite, GemInfo infoPanel)
+    public void InitData(GemsData data, Sprite sprite, GemInfo infoPanel, bool isUnlocked)
     {
         this.infoPanel = infoPanel;
         image.sprite = sprite;
         this.data = data;
+
+        if(isUnlocked)
         this.GetComponent<Button>().onClick.AddListener(() => infoPanel.InitGemInfoPanel(image.sprite, data));
+        else
+        {
+            image.gameObject.SetActive(false);
+        }
     }
 
 }

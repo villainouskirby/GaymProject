@@ -23,7 +23,7 @@ public class GameManager : MonoSingleton<GameManager>
         Debug.Log(dataPath);
         LoadPlayerData();
         UnlockGemByIndex(0);
-        UnlockGemByIndex(1);
+        UnlockGemByIndex(2);
     }
 
     public void UnlockGemByIndex(short index)
@@ -60,6 +60,7 @@ public class GameManager : MonoSingleton<GameManager>
         byte[] data = Encoding.UTF8.GetBytes(jsonString);
         fs.Write(data, 0, data.Length);
         fs.Close();
+        Debug.Log(data);
     }
 
 }

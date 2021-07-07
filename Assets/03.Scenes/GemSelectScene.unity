@@ -1473,8 +1473,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemIconPrefab: {fileID: 8540646022963877953, guid: dca0f09f19dbc6242befda2109ec8569, type: 3}
   gemInfoPanel: {fileID: 341525793}
-  sprites:
-  - {fileID: 21300000, guid: 46cd0a177a384d9469c07cd46188b6bf, type: 3}
 --- !u!1 &1001773763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2237,7 +2235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698369834660674915, guid: 0c3ed50bb00d2af48a75ee5b99dc7a96, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1698369834660674915, guid: 0c3ed50bb00d2af48a75ee5b99dc7a96, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2245,7 +2243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698369834660674915, guid: 0c3ed50bb00d2af48a75ee5b99dc7a96, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1698369834660674915, guid: 0c3ed50bb00d2af48a75ee5b99dc7a96, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2289,7 +2287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698369834660674915, guid: 0c3ed50bb00d2af48a75ee5b99dc7a96, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 128
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1698369834660674915, guid: 0c3ed50bb00d2af48a75ee5b99dc7a96, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2944,3 +2942,13 @@ MonoBehaviour:
   gemSprites:
   - {fileID: 21300000, guid: 46cd0a177a384d9469c07cd46188b6bf, type: 3}
   - {fileID: 21300000, guid: d251fc848cc289a4398c3cad065f98b0, type: 3}
+  - {fileID: 21300000, guid: 3e124055810e4fa458bd9d72afe4bb52, type: 3}
+  - {fileID: 21300000, guid: 3e124055810e4fa458bd9d72afe4bb52, type: 3}
+  - {fileID: 21300000, guid: 3e124055810e4fa458bd9d72afe4bb52, type: 3}
+  - {fileID: 21300000, guid: 3e124055810e4fa458bd9d72afe4bb52, type: 3}
+  - {fileID: 21300000, guid: 3e124055810e4fa458bd9d72afe4bb52, type: 3}
+  - {fileID: 21300000, guid: 3e124055810e4fa458bd9d72afe4bb52, type: 3}
+  - {fileID: 21300000, guid: 3e124055810e4fa458bd9d72afe4bb52, type: 3}
+  - {fileID: 21300000, guid: 3e124055810e4fa458bd9d72afe4bb52, type: 3}
+  - {fileID: 21300000, guid: 3e124055810e4fa458bd9d72afe4bb52, type: 3}
+  - {fileID: 21300000, guid: 3e124055810e4fa458bd9d72afe4bb52, type: 3}

@@ -31,14 +31,15 @@ public class GemUI : MonoBehaviour
             slotIcons[i].SetActive(true);
         }
     }
-
-    public void SetGem(short index)
+    
+    public void SetGem(short index, out bool isSuccess)
     {
         if(GameManager.Instance.GemDatas.dataArray[index].Cost + currentCost > maxCost)
         {
 #if UNITY_EDITOR
             Debug.Log("코스트가 꽉찼습니다!");
 #endif
+            isSuccess = false;
             return;
         }
 
@@ -48,7 +49,8 @@ public class GemUI : MonoBehaviour
             {
 #if UNITY_EDITOR
                 Debug.Log(index + " 번 슬롯에 이미 장착된 보석입니다!");
-#endif  
+#endif
+                isSuccess = false;
                 return;
             }
         }
@@ -62,9 +64,11 @@ public class GemUI : MonoBehaviour
                 UpdateCostIcons();
 
                 slotIcons[i].GetComponent<Slot>().Equip(index);
+                isSuccess = true;
                 return;
             }
         }
+        isSuccess = false;
     }
     
     public void RemoveGem(short index)

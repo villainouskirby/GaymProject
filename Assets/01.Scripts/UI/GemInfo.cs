@@ -21,10 +21,17 @@ public class GemInfo : MonoBehaviour
         this.gemName.text = data.Name;
         this.gemCost.text = $"ÄÚ½ºÆ® : {data.Cost}";
 
-        btnCancel.onClick.AddListener(() => gameObject.SetActive(false));
+        btnCancel.onClick.AddListener(() =>
+        {
+            gameObject.SetActive(false);
+            btnOK.onClick.RemoveAllListeners();
+        });
+
         btnOK.onClick.AddListener(() => 
         {
-            FindObjectOfType<GemUI>().SetGem(data.Index);
+            FindObjectOfType<GemUI>().SetGem(data.Index, out bool isSuccess);
+
+            if(!isSuccess) { return; }
 
             Gem[] temp =  FindObjectsOfType<Gem>();
             for (int i = 0; i < temp.Length; i++)

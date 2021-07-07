@@ -6,7 +6,6 @@ public class GemCase : MonoBehaviour
 {
     [SerializeField] GameObject gemIconPrefab = null;
     [SerializeField] GemInfo gemInfoPanel;
-    [SerializeField] Sprite[] sprites = null;
 
     void Start()
     {
@@ -17,15 +16,13 @@ public class GemCase : MonoBehaviour
     {
         for (int i = 0; i < GameManager.Instance.GemDatas.dataArray.Length; i++)
         {
+            bool isUnlocked = false;
             for (int j = 0; j < GameManager.Instance.PlayerData.unlockGemIndex.Count; j++)
             {
-                if (i == GameManager.Instance.PlayerData.unlockGemIndex[j])
-                {
-                    GameObject temp = Instantiate(gemIconPrefab, this.gameObject.transform);
-                    Debug.Log(i);
-                    temp.GetComponent<Gem>().InitData(GameManager.Instance.GemDatas.dataArray[i], sprites[i], gemInfoPanel);
-                }
+                if (i == GameManager.Instance.PlayerData.unlockGemIndex[j]) isUnlocked = true;
             }
+            GameObject temp = Instantiate(gemIconPrefab, this.gameObject.transform);
+            temp.GetComponent<Gem>().InitData(GameManager.Instance.GemDatas.dataArray[i], GameManager.Instance.GemSprites[i], gemInfoPanel, isUnlocked);
         }
     }
 
