@@ -53,7 +53,6 @@ public class GemUI : MonoBehaviour
             }
         }
 
-
         for (int i = 0; i < maxSlot; i++)
         {
             if (!slotIcons[i].GetComponent<Slot>().IsEquip)
@@ -103,6 +102,5 @@ public class GemUI : MonoBehaviour
                 costIcons[i].GetComponent<Image>().sprite = Resources.Load<Sprite>("Icons/SlotIcon_Unfill");
             }
         }
-        Debug.Log(currentCost);
     }
 }

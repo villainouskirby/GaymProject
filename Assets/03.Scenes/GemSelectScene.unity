@@ -2943,3 +2943,4 @@ MonoBehaviour:
   gemData: {fileID: 11400000, guid: 8114217a98e2ba246b02345003ae97be, type: 2}
   gemSprites:
   - {fileID: 21300000, guid: 46cd0a177a384d9469c07cd46188b6bf, type: 3}
+  - {fileID: 21300000, guid: d251fc848cc289a4398c3cad065f98b0, type: 3}

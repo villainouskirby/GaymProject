@@ -12,7 +12,7 @@ public class GemInfo : MonoBehaviour
     [SerializeField] Text gemInfo;
     [SerializeField] Text gemCost;
 
-    public void InitGemInfoPanel(Sprite sprite, GemsData data, Gem gem)
+    public void InitGemInfoPanel(Sprite sprite, GemsData data)
     {
         gameObject.SetActive(true);
 
@@ -36,7 +36,7 @@ public class GemInfo : MonoBehaviour
             }
 
             gameObject.SetActive(false);
-
+            btnOK.onClick.RemoveAllListeners();
         });
     }
 
