@@ -9,15 +9,14 @@ public class SkillNode : MonoBehaviour
         rightUpper,
         rightLower,
         leftUpper,
-        leftLower
-    };  
+        leftLower,
+    };
 
-    [SerializeField] List<SkillNode> parentNodes = new List<SkillNode>(); 
-    [SerializeField] List<SkillNode> childrenNodes = new List<SkillNode>();
-
+    [SerializeField] NodePos thisPos;
     [SerializeField] short rootDistance = 0;
+
     [SerializeField] bool bCanUpgrade = false;
+
     public bool BCanUpgrade { get { return bCanUpgrade; } set { bCanUpgrade = value; } }
-    
 
 }

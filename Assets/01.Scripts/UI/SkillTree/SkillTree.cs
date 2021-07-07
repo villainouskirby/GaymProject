@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class SkillTree : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] SkillNode rootNode;
+    
+    [SerializeField] List<SkillNode> rightUpperNodes = new List<SkillNode>();
+    [SerializeField] List<SkillNode> rightLowerNodes = new List<SkillNode>();
+    [SerializeField] List<SkillNode> leftUpperNodes = new List<SkillNode>();
+    [SerializeField] List<SkillNode> leftLowerNodes = new List<SkillNode>();
+
+    private void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    void UpdateAllNodes()
     {
-        
+
     }
 }
