@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 32544742}
   - component: {fileID: 32544741}
   m_Layer: 5
-  m_Name: Info
+  m_Name: InfoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -193,8 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD50C\uBA38\uC758 \uC601\uD63C\uC774 \uB2F4\uAE34 \uBCF4\uC11D\uC774\uB2E4.\n\uADF8\uB807\uB2E4.\n\uADF8\uB807\uB2E4\uB2C8\uAE4C
-    \uAE00\uC3BC\n\uB07C\uC9C0\uB9C8 \uC81C\uBC1C\n\u3141\u3134\u3147\u313B\u3134\u3147\u3139"
+  m_Text: 
 --- !u!222 &32544742
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -476,13 +475,14 @@ RectTransform:
   - {fileID: 877899754}
   - {fileID: 746807324}
   - {fileID: 1649424253}
+  - {fileID: 1562227108}
   m_Father: {fileID: 1394404865}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 500}
+  m_SizeDelta: {x: 1000, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &341525791
 MonoBehaviour:
@@ -539,6 +539,7 @@ MonoBehaviour:
   gemImage: {fileID: 2091458690}
   gemName: {fileID: 1820164115}
   gemInfo: {fileID: 32544741}
+  gemCost: {fileID: 1562227109}
 --- !u!1 &404728932
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,6 +780,7 @@ GameObject:
   - component: {fileID: 715444617}
   - component: {fileID: 715444619}
   - component: {fileID: 715444618}
+  - component: {fileID: 715444620}
   m_Layer: 5
   m_Name: SlotIcon
   m_TagString: Untagged
@@ -843,6 +845,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715444616}
   m_CullTransparentMesh: 1
+--- !u!114 &715444620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715444616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769c54a80f7750c48a99a79938ea6f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &720248308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,7 +1131,7 @@ GameObject:
   - component: {fileID: 877899756}
   - component: {fileID: 877899755}
   m_Layer: 5
-  m_Name: GemImage
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1422,6 +1436,7 @@ GameObject:
   - component: {fileID: 1001773764}
   - component: {fileID: 1001773766}
   - component: {fileID: 1001773765}
+  - component: {fileID: 1001773767}
   m_Layer: 5
   m_Name: GemUI
   m_TagString: Untagged
@@ -1490,6 +1505,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001773763}
   m_CullTransparentMesh: 1
+--- !u!114 &1001773767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001773763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ce3c5927d990964f9fdcc88e6b5ccaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1075704956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1603,7 @@ GameObject:
   - component: {fileID: 1371452212}
   - component: {fileID: 1371452214}
   - component: {fileID: 1371452213}
+  - component: {fileID: 1371452215}
   m_Layer: 5
   m_Name: SlotIcon
   m_TagString: Untagged
@@ -1640,6 +1668,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371452211}
   m_CullTransparentMesh: 1
+--- !u!114 &1371452215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371452211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769c54a80f7750c48a99a79938ea6f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1383274538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,6 +2081,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498501931}
   m_CullTransparentMesh: 1
+--- !u!1 &1562227107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1562227108}
+  - component: {fileID: 1562227110}
+  - component: {fileID: 1562227109}
+  m_Layer: 5
+  m_Name: CostText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1562227108
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562227107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 341525790}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 256, y: 144}
+  m_SizeDelta: {x: 256, y: 64}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1562227109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562227107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 52f1c9ad70545d14da7206ce29be2cd9, type: 3}
+    m_FontSize: 32
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 64
+    m_Alignment: 6
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1562227110
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562227107}
+  m_CullTransparentMesh: 1
 --- !u!1 &1601096983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,7 +2501,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD50C\uBA38\uC758 \uC6D0\uD63C"
+  m_Text: 
 --- !u!222 &1820164116
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2630,6 +2749,7 @@ GameObject:
   - component: {fileID: 2080726266}
   - component: {fileID: 2080726268}
   - component: {fileID: 2080726267}
+  - component: {fileID: 2080726269}
   m_Layer: 5
   m_Name: SlotIcon
   m_TagString: Untagged
@@ -2694,6 +2814,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080726265}
   m_CullTransparentMesh: 1
+--- !u!114 &2080726269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080726265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769c54a80f7750c48a99a79938ea6f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2091458688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2706,7 +2838,7 @@ GameObject:
   - component: {fileID: 2091458691}
   - component: {fileID: 2091458690}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: GemImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2812,4 +2944,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5bc3f110e64eb2418820cb4b6c7e1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemDatas: {fileID: 11400000, guid: 8114217a98e2ba246b02345003ae97be, type: 2}
+  gemData: {fileID: 11400000, guid: 8114217a98e2ba246b02345003ae97be, type: 2}

@@ -9,6 +9,8 @@ public class Gem : MonoBehaviour
     GemsData data = new GemsData();
     GemInfo infoPanel;
 
+    bool isSelected = false;
+
     public void InitData(GemsData data, Sprite sprite, GemInfo infoPanel)
     {
         this.infoPanel = infoPanel;
@@ -18,7 +20,7 @@ public class Gem : MonoBehaviour
 
     public void OnClick()
     {
-        infoPanel.InitGemInfoPanel(image.sprite, data.Name, data.Info);
+        infoPanel.InitGemInfoPanel(image.sprite, data.Name, data.Info, data.Cost);
     }
 
 }
