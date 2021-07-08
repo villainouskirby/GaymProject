@@ -3,7 +3,8 @@ guid: c5bc3f110e64eb2418820cb4b6c7e1c5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - gemData: {fileID: 11400000, guid: 8114217a98e2ba246b02345003ae97be, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

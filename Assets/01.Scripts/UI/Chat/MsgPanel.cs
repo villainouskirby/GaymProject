@@ -61,7 +61,7 @@ public class MsgPanel : MonoBehaviour
         this.msg.DOText(msg[msgIndex], msgTime).OnComplete(() =>
         {
             msgIndex++;
-            Invoke(nameof(currentMsgFin), 0.5f);
+            Invoke(nameof(CurrentMsgFin), 0.5f);
         });
     }
 
@@ -79,11 +79,11 @@ public class MsgPanel : MonoBehaviour
         this.msg.DOText(str_Msg[msgIndex], msgTime).OnComplete(() =>
         {
             msgIndex++;
-            Invoke(nameof(currentMsgFin), 0.5f);
+            Invoke(nameof(CurrentMsgFin), 0.5f);
         });
     }
 
-    void currentMsgFin()
+    void CurrentMsgFin()
     {
         isCurrentMsgFinish = true;
         nextMsgIcon.SetActive(true);

@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1888fa05d8669734eb9844752d434959, type: 3}
+  m_Name: Gems
+  m_EditorClassIdentifier: 
+  SheetName: Assets/01.Scripts/Data/Data.xlsx
+  WorksheetName: Gems
+  dataArray:
+  - index: 0
+    cost: 1
+    name: "\uD50C\uBA38\uC758 \uC6D0\uD63C"
+    info: "\uD50C\uBA38\uC758 \uC601\uD63C\uC774 \uB2F4\uAE34 \uBCF4\uC11D\uC774\uB2E4.\n\uADF8\uB807\uB2E4.\n\uADF8\uB807\uB2E4\uB2C8\uAE4C
+      \uAE00\uC3BC\n\uB07C\uC9C0\uB9C8 \uC81C\uBC1C\n\u3141\u3134\u3147\u313B\u3134\u3147\u3139"
+    isunlock: 1
+  - index: 1
+    cost: 2
+    name: "\uD14C\uC2A4\uD2B8\uC6A9 \uBCF4\uC11D"
+    info: "\uD14C\uC2A4\uD2B8 \uD558\uB824\uACE0 \uB9CC\uB4E0 \uBCF4\uC11D\uC774\uC5D0\uC694
+      \uC554\uD2BC \uADF8\uB798\uC694"
+    isunlock: 1
+  - index: 2
+    cost: 1
+    name: "\uD14C\uC2A4\uD2B8\uC6A9 \uBCF4\uC11D2"
+    info: "\uD14C\uC2A4\uD2B8 \uD558\uB824\uACE0 \uB9CC\uB4E0 \uBCF4\uC11D\uC774\uC5D0\uC694
+      \uC554\uD2BC \uADF8\uB798\uC694"
+    isunlock: 1
+  - index: 3
+    cost: 1
+    name: "\uD14C\uC2A4\uD2B8\uC6A9 \uBCF4\uC11D3"
+    info: "\uD14C\uC2A4\uD2B8 \uD558\uB824\uACE0 \uB9CC\uB4E0 \uBCF4\uC11D\uC774\uC5D0\uC694
+      \uC554\uD2BC \uADF8\uB798\uC694"
+    isunlock: 0
+  - index: 4
+    cost: 1
+    name: "\uD14C\uC2A4\uD2B8\uC6A9 \uBCF4\uC11D4"
+    info: "\uD14C\uC2A4\uD2B8 \uD558\uB824\uACE0 \uB9CC\uB4E0 \uBCF4\uC11D\uC774\uC5D0\uC694
+      \uC554\uD2BC \uADF8\uB798\uC694"
+    isunlock: 0
+  - index: 5
+    cost: 1
+    name: "\uD14C\uC2A4\uD2B8\uC6A9 \uBCF4\uC11D5"
+    info: "\uD14C\uC2A4\uD2B8 \uD558\uB824\uACE0 \uB9CC\uB4E0 \uBCF4\uC11D\uC774\uC5D0\uC694
+      \uC554\uD2BC \uADF8\uB798\uC694"
+    isunlock: 0
+  - index: 6
+    cost: 1
+    name: "\uD14C\uC2A4\uD2B8\uC6A9 \uBCF4\uC11D6"
+    info: "\uD14C\uC2A4\uD2B8 \uD558\uB824\uACE0 \uB9CC\uB4E0 \uBCF4\uC11D\uC774\uC5D0\uC694
+      \uC554\uD2BC \uADF8\uB798\uC694"
+    isunlock: 0
+  - index: 7
+    cost: 1
+    name: "\uD14C\uC2A4\uD2B8\uC6A9 \uBCF4\uC11D7"
+    info: "\uD14C\uC2A4\uD2B8 \uD558\uB824\uACE0 \uB9CC\uB4E0 \uBCF4\uC11D\uC774\uC5D0\uC694
+      \uC554\uD2BC \uADF8\uB798\uC694"
+    isunlock: 0
+  - index: 8
+    cost: 1
+    name: "\uD14C\uC2A4\uD2B8\uC6A9 \uBCF4\uC11D8"
+    info: "\uD14C\uC2A4\uD2B8 \uD558\uB824\uACE0 \uB9CC\uB4E0 \uBCF4\uC11D\uC774\uC5D0\uC694
+      \uC554\uD2BC \uADF8\uB798\uC694"
+    isunlock: 0
+  - index: 9
+    cost: 1
+    name: "\uD14C\uC2A4\uD2B8\uC6A9 \uBCF4\uC11D9"
+    info: "\uD14C\uC2A4\uD2B8 \uD558\uB824\uACE0 \uB9CC\uB4E0 \uBCF4\uC11D\uC774\uC5D0\uC694
+      \uC554\uD2BC \uADF8\uB798\uC694"
+    isunlock: 0
+  - index: 10
+    cost: 1
+    name: "\uD14C\uC2A4\uD2B8\uC6A9 \uBCF4\uC11D10"
+    info: "\uD14C\uC2A4\uD2B8 \uD558\uB824\uACE0 \uB9CC\uB4E0 \uBCF4\uC11D\uC774\uC5D0\uC694
+      \uC554\uD2BC \uADF8\uB798\uC694"
+    isunlock: 0
+  - index: 11
+    cost: 1
+    name: "\uD14C\uC2A4\uD2B8\uC6A9 \uBCF4\uC11D11"
+    info: "\uD14C\uC2A4\uD2B8 \uD558\uB824\uACE0 \uB9CC\uB4E0 \uBCF4\uC11D\uC774\uC5D0\uC694
+      \uC554\uD2BC \uADF8\uB798\uC694"
+    isunlock: 0
