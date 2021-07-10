@@ -13,7 +13,7 @@ public class Bezier : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        p0 = Camera.main.ScreenToWorldPoint(t0.position);
+        p0 = t0.position;
         p0[2] = 0;
         lineRenderer.positionCount = size;
     }
@@ -23,13 +23,7 @@ public class Bezier : MonoBehaviour
     {
         p2 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         p2[2] = 0;
-        float x = (p0[0] + p2[0]) / 2;
-        float y;
-        if (p0[1] > p2[1])
-            y = p0[1] + 1;
-        else
-            y = p2[1] + 1;
-        p1 = new Vector3(x,y, 0);
+        p1 = new Vector3((p0[0] + p2[0]) / 2, Mathf.Max(p0[1], p2[1]) + 1, 0);
         Draw();
     }
 

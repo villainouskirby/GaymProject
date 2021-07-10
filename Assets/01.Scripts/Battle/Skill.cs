@@ -13,8 +13,8 @@ public class Skill : MonoBehaviour
     private string skill;
     private string skilled;
     List<List<string>> battle = new List<List<string>>();
-    
-    public void check_Skill()
+
+    private void OnMouseDown()
     {
         if (checking)
         {
@@ -26,8 +26,12 @@ public class Skill : MonoBehaviour
         {
             skills.SetActive(true);
             checking = true;
-            user = EventSystem.current.currentSelectedGameObject.name;
         }
+    }
+    /*
+    public void check_Skill()
+    {
+        
     }
     public void Use()
     {
@@ -71,5 +75,5 @@ public class Skill : MonoBehaviour
                 Debug.Log(battle[i][j]);
             }
         }    
-    }
+    }*/
 }
