@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class BattleInformation : MonoBehaviour
 {
@@ -19,6 +20,12 @@ public class BattleInformation : MonoBehaviour
     public Text t_Passive;
     public bool isplayer;
     public Dictionary<string, object> data;
+    public GameObject arrow;
+    public GameObject skills;
+    public Skill skillscript;
+    public GameObject mine;
+    string skilled;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -35,6 +42,18 @@ public class BattleInformation : MonoBehaviour
         t_HP.text = "HP : " + HP.ToString();
         t_MP.text = "MP : " + MP.ToString();
         t_Passive.text = "ÆÐ½Ãºê\n" + Passive;
+    }
+
+    private void OnMouseDown()
+    {
+        if (skillscript.using_skill)
+        {
+            arrow.SetActive(false);
+            Debug.Log(mine.name);
+            skillscript.using_skill = false;
+        }
+        else
+            skills.SetActive(true);
     }
     // Update is called once per frame
     void Update()
