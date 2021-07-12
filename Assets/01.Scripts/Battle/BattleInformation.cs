@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
 public class BattleInformation : MonoBehaviour
 {
@@ -24,7 +23,6 @@ public class BattleInformation : MonoBehaviour
     public GameObject skills;
     public Skill skillscript;
     public GameObject mine;
-    string skilled;
 
     // Start is called before the first frame update
     void Awake()
@@ -49,11 +47,14 @@ public class BattleInformation : MonoBehaviour
         if (skillscript.using_skill)
         {
             arrow.SetActive(false);
-            Debug.Log(mine.name);
             skillscript.using_skill = false;
+            skillscript.attack_lst.Add(new List<string>(new string[] { skillscript.skill_user, skillscript.used_skill, mine.name }));
         }
-        else
+        else if(isplayer)
+        {
+            skillscript.skill_user = mine.name;
             skills.SetActive(true);
+        }
     }
     // Update is called once per frame
     void Update()
