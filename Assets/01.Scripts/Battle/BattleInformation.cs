@@ -22,7 +22,6 @@ public class BattleInformation : MonoBehaviour
     public GameObject arrow;
     public GameObject skills;
     public Skill skillscript;
-    public GameObject mine;
 
     // Start is called before the first frame update
     void Awake()
@@ -46,13 +45,18 @@ public class BattleInformation : MonoBehaviour
     {
         if (skillscript.using_skill)
         {
-            arrow.SetActive(false);
-            skillscript.using_skill = false;
-            skillscript.attack_lst.Add(new List<string>(new string[] { skillscript.skill_user, skillscript.used_skill, mine.name }));
+            if(!skillscript.skillEffect.isAttack || this.name != skillscript.skill_user)
+                arrow.SetActive(false);
+                skillscript.using_skill = false;
+                skillscript.attack_lst.Add(new List<string>(new string[] {skillscript.skill_user, skillscript.used_skill, this.name }));
+                foreach (List<string> i in skillscript.attack_lst)
+                {
+                Debug.Log(i[0] + " " + i[1] + " " + i[2]);
+                }
         }
         else if(isplayer)
         {
-            skillscript.skill_user = mine.name;
+            skillscript.skill_user = this.name;
             skills.SetActive(true);
         }
     }
